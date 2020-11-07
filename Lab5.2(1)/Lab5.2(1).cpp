@@ -9,6 +9,7 @@ using namespace std;
 
 void S(const double x, const double eps, int& n, double& s);
 void A(const double x, const int n, double& a);
+double F(const double x, const double n);
 int main() {
     double xp, xk, x, dx, eps, s = 0;
     int n = 0;
@@ -49,4 +50,9 @@ void A(const double x, const int n, double& a)
 {
     double R = (n - 2) / (n * x * x);
     a *= R;
+}
+double F(const double x, const double n)
+{
+    double R = (n - 2) / (n * x * x);
+    return R;
 }
